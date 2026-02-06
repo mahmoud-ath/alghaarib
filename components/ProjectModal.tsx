@@ -7,6 +7,22 @@ interface ProjectModalProps {
   onClose: () => void;
 }
 
+// Helper function to extract YouTube video ID from URL
+const getYouTubeVideoId = (url: string): string | null => {
+  const regex = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/;
+  const match = url.match(regex);
+  return match ? match[1] : null;
+};
+
+// Helper function to get YouTube embed URL
+const getYouTubeEmbedUrl = (videoUrl: string): string => {
+  const videoId = getYouTubeVideoId(videoUrl);
+  if (videoId) {
+    return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+  }
+  return videoUrl; // fallback to original URL
+};
+
 const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-10 animate-in fade-in duration-300">
@@ -43,11 +59,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                 </div>
               </div>
               <div className="md:w-2/3 bg-black flex items-center justify-center aspect-video md:aspect-auto">
-                <video 
-                  src={project.videoUrl} 
-                  controls 
-                  autoPlay 
-                  className="w-full h-full object-contain"
+                <iframe
+                  src={getYouTubeEmbedUrl(project.videoUrl || '')}
+                  title={project.title}
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
                 />
               </div>
             </div>
@@ -64,20 +82,22 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
               <div className="space-y-8">
                 <div className="grid grid-cols-1 gap-8">
-                  {project.galleryImages?.map((img, idx) => (
-                    <img 
-                      key={idx} 
-                      src={img} 
-                      alt={`${project.title} slide ${idx + 1}`}
-                      className="w-full h-auto object-cover rounded-sm shadow-sm"
-                    />
-                  )) || (
-                    <img 
-                      src={project.thumbnailUrl} 
-                      alt={project.title} 
-                      className="w-full h-auto object-cover rounded-sm"
-                    />
-                  )}
+                  {project.galleryImages && project.galleryImages.length > 0 ? 
+                    project.galleryImages.map((img, idx) => (
+                      <img 
+                        key={idx} 
+                        src={img} 
+                        alt={`${project.title} slide ${idx + 1}`}
+                        className="w-full h-auto object-cover rounded-sm shadow-sm"
+                      />
+                    )) : (
+                      <img 
+                        src={project.thumbnailUrl} 
+                        alt={project.title} 
+                        className="w-full h-auto object-cover rounded-sm"
+                      />
+                    )
+                  }
                 </div>
               </div>
             </div>

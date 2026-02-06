@@ -21,6 +21,14 @@ export const useProjectData = () => {
           throw new Error('Failed to fetch project data');
         }
         const projectData = await response.json();
+        
+        // Sort projects by ID in descending order (newest first)
+        if (projectData.projects) {
+          projectData.projects.sort((a: Project, b: Project) => {
+            return parseInt(b.id) - parseInt(a.id);
+          });
+        }
+        
         setData(projectData);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Unknown error occurred');

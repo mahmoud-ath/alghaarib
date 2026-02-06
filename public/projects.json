@@ -2,26 +2,30 @@
   "projects": [
     {
       "id": "1",
-      "title": "Lumina Brand Identity",
+      "title": "m2zone Channel",
       "description": "Brand Identity & Social Campaign. A full-scale rebranding for a sustainable lighting company, focusing on minimalist aesthetics and eco-friendly messaging.",
       "category": "Design",
       "subcategory": "Branding",
-      "thumbnailUrl": "/images/lumina-thumbnail.jpg",
+      "thumbnailUrl": "/images/logo-m2zone--1770338325382-112000951.png",
       "galleryImages": [
         "/images/lumina-gallery-1.jpg",
         "/images/lumina-gallery-2.jpg",
-        "/images/lumina-gallery-3.jpg"
-      ]
+        "/images/lumina-gallery-3.jpg",
+        "/images/logo-m2zone--1770338332958-316154941.png"
+      ],
+      "isVideo": false,
+      "videoUrl": ""
     },
     {
       "id": "2",
-      "title": "Urban Flow",
+      "title": "T-shirt 3D",
       "description": "15s Commercial Motion Graphic for a leading athletic wear brand. Captured the essence of city movement and high-performance gear through dynamic transitions.",
       "category": "Video",
       "subcategory": "Motion Graphics",
       "thumbnailUrl": "/images/urbanflow-thumbnail.jpg",
       "isVideo": true,
-      "videoUrl": "/videos/urbanflow.mp4"
+      "videoUrl": "https://youtu.be/l3_6QN1xV8I?si=64kUq-wMwXiB1DRx",
+      "galleryImages": []
     },
     {
       "id": "3",
@@ -35,7 +39,7 @@
         "/images/arcadia-gallery-2.jpg"
       ],
       "isVideo": true,
-      "videoUrl": "/videos/arcadia.mp4"
+      "videoUrl": "https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
     },
     {
       "id": "4",
@@ -45,7 +49,7 @@
       "subcategory": "Documentary",
       "thumbnailUrl": "/images/echoes-thumbnail.jpg",
       "isVideo": true,
-      "videoUrl": "/videos/echoes-nature.mp4"
+      "videoUrl": "https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
     },
     {
       "id": "5",
@@ -68,7 +72,7 @@
       "subcategory": "Commercial",
       "thumbnailUrl": "/images/futurepulse-thumbnail.jpg",
       "isVideo": true,
-      "videoUrl": "/videos/future-pulse.mp4"
+      "videoUrl": "https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
     },
     {
       "id": "7",
@@ -86,11 +90,19 @@
   "skillCategories": [
     {
       "title": "Graphic Design",
-      "skills": ["Logo/Branding", "Print Media", "Digital/UI Design"]
+      "skills": [
+        "Logo/Branding",
+        "Print Media",
+        "Digital/UI Design"
+      ]
     },
     {
       "title": "Video Editing",
-      "skills": ["Commercial Editing", "Motion Graphics", "Social Content Strategy"]
+      "skills": [
+        "Commercial Editing",
+        "Motion Graphics",
+        "Social Content Strategy"
+      ]
     }
   ],
   "tools": [

@@ -7,14 +7,37 @@ interface ProjectCardProps {
   onClick?: () => void;
 }
 
+// Helper function to get YouTube thumbnail if needed
+const getDisplayThumbnail = (project: Project): string => {
+  if (project.thumbnailUrl && project.thumbnailUrl.startsWith('/images/')) {
+    return project.thumbnailUrl; // Use custom uploaded thumbnail
+  }
+  
+  if (project.isVideo && project.videoUrl) {
+    // Extract YouTube video ID
+    const regex = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/;
+    const match = project.videoUrl.match(regex);
+    if (match) {
+      return `https://img.youtube.com/vi/${match[1]}/maxresdefault.jpg`;
+    }
+  }
+  
+  return project.thumbnailUrl || '/images/placeholder.jpg'; // Fallback
+};
+
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
   return (
     <div className="group cursor-pointer" onClick={onClick}>
       <div className="relative overflow-hidden mb-4 bg-gray-200 aspect-[4/3] transition-all duration-500 ease-out group-hover:scale-[1.02]">
         <img
-          src={project.thumbnailUrl}
+          src={getDisplayThumbnail(project)}
           alt={project.title}
           className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+          onError={(e) => {
+            // Fallback if image fails to load
+            const target = e.target as HTMLImageElement;
+            target.src = 'https://via.placeholder.com/400x300?text=No+Image';
+          }}
         />
         {project.isVideo && (
           <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/0 transition-colors">
