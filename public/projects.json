@@ -1,0 +1,102 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "Lumina Brand Identity",
+      "description": "Brand Identity & Social Campaign. A full-scale rebranding for a sustainable lighting company, focusing on minimalist aesthetics and eco-friendly messaging.",
+      "category": "Design",
+      "subcategory": "Branding",
+      "thumbnailUrl": "https://picsum.photos/seed/lumina/800/600",
+      "galleryImages": [
+        "https://picsum.photos/seed/lumina1/1200/800",
+        "https://picsum.photos/seed/lumina2/1200/800",
+        "https://picsum.photos/seed/lumina3/1200/800"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Urban Flow",
+      "description": "15s Commercial Motion Graphic for a leading athletic wear brand. Captured the essence of city movement and high-performance gear through dynamic transitions.",
+      "category": "Video",
+      "subcategory": "Motion Graphics",
+      "thumbnailUrl": "https://picsum.photos/seed/urbanflow/800/600",
+      "isVideo": true,
+      "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4"
+    },
+    {
+      "id": "3",
+      "title": "Arcadia Rebrand",
+      "description": "Comprehensive Brand Ecosystem including logo design, color palette, and a high-impact launch trailer.",
+      "category": "Both",
+      "subcategory": "Logo Design",
+      "thumbnailUrl": "https://picsum.photos/seed/arcadia/800/600",
+      "galleryImages": [
+        "https://picsum.photos/seed/arc1/1200/800",
+        "https://picsum.photos/seed/arc2/1200/800"
+      ],
+      "isVideo": true,
+      "videoUrl": "https://www.w3schools.com/html/movie.mp4"
+    },
+    {
+      "id": "4",
+      "title": "Echoes of Nature",
+      "description": "Documentary Short Film exploring the impact of urban sprawl on local ecosystems. A cinematic journey through sound and light.",
+      "category": "Video",
+      "subcategory": "Documentary",
+      "thumbnailUrl": "https://picsum.photos/seed/echoes/800/600",
+      "isVideo": true,
+      "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4"
+    },
+    {
+      "id": "5",
+      "title": "Symmetry Magazine",
+      "description": "Print & Digital Layout for a biannual architectural publication. Focuses on modular grids and bold typography.",
+      "category": "Design",
+      "subcategory": "Print",
+      "thumbnailUrl": "https://picsum.photos/seed/symmetry/800/600",
+      "galleryImages": [
+        "https://picsum.photos/seed/sym1/1200/800",
+        "https://picsum.photos/seed/sym2/1200/800",
+        "https://picsum.photos/seed/sym3/1200/800"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Future Pulse",
+      "description": "Product Launch Event Video. High-energy visuals synced with custom sound design for a futuristic tech showcase.",
+      "category": "Both",
+      "subcategory": "Commercial",
+      "thumbnailUrl": "https://picsum.photos/seed/futurepulse/800/600",
+      "isVideo": true,
+      "videoUrl": "https://www.w3schools.com/html/movie.mp4"
+    },
+    {
+      "id": "7",
+      "title": "Social Surge",
+      "description": "Instagram Grid & Story Assets for a lifestyle startup. Consistent visual language designed for maximum engagement.",
+      "category": "Design",
+      "subcategory": "Social Media",
+      "thumbnailUrl": "https://picsum.photos/seed/social/800/600",
+      "galleryImages": [
+        "https://picsum.photos/seed/soc1/1200/800",
+        "https://picsum.photos/seed/soc2/1200/800"
+      ]
+    }
+  ],
+  "skillCategories": [
+    {
+      "title": "Graphic Design",
+      "skills": ["Logo/Branding", "Print Media", "Digital/UI Design"]
+    },
+    {
+      "title": "Video Editing",
+      "skills": ["Commercial Editing", "Motion Graphics", "Social Content Strategy"]
+    }
+  ],
+  "tools": [
+    "Adobe Creative Suite",
+    "Figma",
+    "DaVinci Resolve",
+    "Final Cut Pro"
+  ]
+}
