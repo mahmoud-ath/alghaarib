@@ -14,8 +14,8 @@ const getDisplayThumbnail = (project: Project): string => {
   }
   
   if (project.isVideo && project.videoUrl) {
-    // Extract YouTube video ID
-    const regex = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/;
+    // Extract YouTube video ID (supports regular videos and Shorts)
+    const regex = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=|shorts\/)|youtu\.be\/)([^"&?\/\s]{11})/;
     const match = project.videoUrl.match(regex);
     if (match) {
       return `https://img.youtube.com/vi/${match[1]}/maxresdefault.jpg`;
@@ -32,7 +32,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
         <img
           src={getDisplayThumbnail(project)}
           alt={project.title}
-          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+          className="w-full h-full object-cover  group-hover:grayscale-0 transition-all duration-700"
           onError={(e) => {
             // Fallback if image fails to load
             const target = e.target as HTMLImageElement;

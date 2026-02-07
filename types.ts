@@ -10,7 +10,8 @@ export interface Project {
   thumbnailUrl: string;
   galleryImages?: string[];
   isVideo?: boolean;
-  videoUrl?: string; // Placeholder for video source
+  videoUrl?: string; // Primary video URL
+  videoUrls?: string[]; // Additional video URLs for playlists/collections
 }
 
 export interface SkillCategory {
