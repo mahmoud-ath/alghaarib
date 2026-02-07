@@ -1,11 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Antigravity from '../components/Antigravity';
 
 const HomePage: React.FC = () => {
   return (
-    <div className="min-h-screen max-w-screen-xl mx-auto px-6 sm:px-12 lg:px-24">
+    <div className="min-h-screen max-w-screen-xl mx-auto px-6 sm:px-12 lg:px-24 relative">
+      {/* Antigravity Background */}
+      <div className="fixed inset-0 w-full h-full z-0" style={{ width: '100vw', height: '100vh', left: 0, top: 0 }}>
+        <Antigravity
+          count={300}
+          magnetRadius={10}
+          ringRadius={10}
+          waveSpeed={0.4}
+          waveAmplitude={1}
+          particleSize={2}
+          lerpSpeed={0.1}
+          color="#88d892ff"
+          autoAnimate={false}
+          particleVariance={1}
+          rotationSpeed={0}
+          depthFactor={1}
+          pulseSpeed={3}
+          particleShape="capsule"
+          fieldStrength={10}
+        />
+      </div>
+
       {/* Header */}
-      <header className="pt-24 pb-16">
+      <header className="pt-24 pb-16 relative z-10">
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tighter mb-2">
           ALGHAARIB
         </h1>
@@ -15,14 +37,14 @@ const HomePage: React.FC = () => {
       </header>
 
       {/* Introduction */}
-      <section className="mb-24 max-w-2xl">
+      <section className="mb-24 max-w-2xl relative z-10">
         <p className="text-xl md:text-2xl leading-relaxed text-gray-800 font-light">
           Hi! I'm a passionate graphic designer and video editor who loves expressing creativity through visuals, motion, and storytelling. Design and editing are more than just tools for me they're about bringing ideas to life, capturing emotion, and inspiring others through impactful visuals and creative flow.
         </p>
       </section>
 
       {/* Navigation */}
-      <section className="mb-32">
+      <section className="mb-32 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
           <Link 
             to="/work" 
@@ -57,7 +79,7 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-gray-100 text-center text-xs text-gray-400 uppercase tracking-widest">
+      <footer className="py-12 border-t border-gray-100 text-center text-xs text-gray-400 uppercase tracking-widest relative z-10">
         &copy; {new Date().getFullYear()} ALGHAARIB. All Rights Reserved.
       </footer>
     </div>

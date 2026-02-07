@@ -29,10 +29,10 @@ const ContactPage: React.FC = () => {
             Ready to Create Something Amazing?
           </h2>
           <a
-            href="mailto:hello@alghaarib.design"
+            href="mailto:madgharib21@gmail.com"
             className="block text-2xl md:text-4xl font-bold hover:underline underline-offset-8 decoration-1 decoration-gray-300 transition-all"
           >
-            hello@alghaarib.design
+            madgharib21@gmail.com
           </a>
           
           <p className="text-gray-500 font-medium">Available for freelance projects</p>
@@ -46,7 +46,9 @@ const ContactPage: React.FC = () => {
               LinkedIn
             </a>
             <a 
-              href="#" 
+              href="https://instagram.com/alghaarib21" 
+                target="_blank" 
+  rel="noopener noreferrer" 
               className="hover:text-gray-500 transition-all transform hover:-translate-y-1"
               aria-label="Instagram"
             >
