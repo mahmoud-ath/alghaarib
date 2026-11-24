@@ -355,6 +355,20 @@
       "videoUrl": "https://www.youtube.com/watch?v=zB0-dwb88Bg&list=PLhUfOaN-b6GwMV0gBWZqkLtmEQ58QPc0a&index=2",
       "videoUrls": [],
       "id": "18"
+    },
+    {
+      "title": "Social Media Design Event",
+      "description": "A cohesive set of social media designs created for events, including announcement, countdown, speaker, and recap posts. Designed with a consistent visual identity to build excitement and drive engagement across platforms.",
+      "category": "Design",
+      "subcategory": "Social Media",
+      "thumbnailUrl": "/images/sunlit-architectural-atrium-1795540639827-419754092.png",
+      "galleryImages": [
+        "/images/publication-instagram-pr--sentation-design-en-style-moderne-oxblood-graphite-1795540629353-232214874.jpg"
+      ],
+      "isVideo": false,
+      "videoUrl": "",
+      "videoUrls": [],
+      "id": "19"
     }
   ],
   "skillCategories": [
